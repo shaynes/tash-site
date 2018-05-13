@@ -1,0 +1,131 @@
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, a, img, hr{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+header{
+    color: #32d0ef
+}
+
+h2{
+    font-size: 2em;
+    margin: 0 0 1em;
+    color: #4c5056;
+}
+
+h3{
+    margin: 0 0 .5em;
+    font-weight: normal;
+    font-size: 125%;
+}
+
+hr{
+    border:0;
+    height: 1px;
+    background-image: linear-gradient(to right, #FFFFFF, #4c5056, #FFFFFF);
+    margin: 1em 0 1em 0;
+}
+
+.pageimage{
+    max-width: 80%;
+    height: auto;
+}
+
+@media screen and (max-width: 500px){
+    .pageimage{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+#aboutimage img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* container descriptions */
+.container{
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#logo{
+    padding: 1em 0 .25em 1em;
+    position: relative;
+}
+
+
+/** top navigation bar*/
+
+#topnav {
+    width: auto;
+    background: #32d0ef;
+}
+
+#topnav ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+#topnav ul li a{
+    color: #FFF;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 25px;
+    font-size: 1em;
+    transition: background-color .35s ease, color .35s ease;
+}
+
+#topnav ul li a:hover{
+    background: #FFF;
+    color: #32d0ef;
+}
+
+
+@media screen and (max-width: 736px){
+    #logo{
+        padding: 3em 1.5em 1em 1.5em;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    #topnav ul li{
+        float:none;
+        display: block;
+    }
+}
+
+/**content page */
+.fullpage{
+    margin: 0 4em 0 4em;
+}
+
+#aboutimage{
+    padding: 0 0 1em 0;
+}
+
+#copyright{
+    display:block;
+    text-align: center;
+}
+
+hr.copyhr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top:2.5em;
+}
