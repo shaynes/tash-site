@@ -34,9 +34,15 @@ hr{
 }
 
 .pageimage{
-    max-width: 80%;
+    max-width: 50%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
+
+
+
 
 @media screen and (max-width: 500px){
     .pageimage{
@@ -46,11 +52,29 @@ hr{
 }
 
 
-#aboutimage img{
-    margin-left: auto;
-    margin-right: auto;
+#slideimage{
+    opacity: 1;
+    transition: opacity 1s;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
     display: block;
 }
+
+
+#slideimagediv{
+    height: 600px;
+    display: block;
+    margin:0px auto;
+    text-align: center;
+}
+#slideimage.fadeOut{
+    opacity:0;
+}
+
+
+
+
 
 /* container descriptions */
 .container{
@@ -61,6 +85,28 @@ hr{
 #logo{
     padding: 1em 0 .25em 1em;
     position: relative;
+}
+
+.logoimage{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactbox{
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: block;
+}
+
+.contactbox img{
+    margin:auto;
+    padding: .75em 0 0 0;
+}
+
+.contactbox p{
+    padding: 0 0 .5em 0;
 }
 
 
@@ -113,7 +159,8 @@ hr{
     margin: 0 4em 0 4em;
 }
 
-#aboutimage{
+
+.pageimagediv{
     padding: 0 0 1em 0;
 }
 
@@ -128,4 +175,13 @@ hr.copyhr{
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin-top:2.5em;
+}
+
+@media screen and (max-width: 500px){
+    #slideimagediv{
+        height: 300px;
+        display: block;
+        margin:0px auto;
+        text-align: center;
+    }
 }

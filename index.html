@@ -13,6 +13,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="icon" href="assets/images/favicon.png">
 </head>
 
 <body>
@@ -21,25 +22,25 @@
         <![endif]-->
     <section id="banner">
         <div id="logo">
-            <img src="assets/images/testlogo.png">
+            <img class="logoimage" src="assets/images/logo1.png">
         </div>
         <div id="topnav">
             <ul>
                 <li class="active">
-                    <a href="#home">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#profile">
+                    <a href="about.html">
                         <span>About Us</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#services">
+                    <a href="services.html">
                         <span>Services</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#contact">
+                    <a href="contact.html">
                         <span>Contact Us</span>
                     </a>
                 </li>
@@ -48,29 +49,45 @@
     </section>
     <div id="content">
         <div class="fullpage">
-            <h2>About Us</h2>
-            <div id=aboutimage>
-                <img class="pageimage" src="assets/images/woman-handshake.png">
-            </div>
-            <h3><strong>Business Size:</strong> Woman Owned Small Business</h3>
-            <h3><strong>NAICS Codes:</strong>????</h3>
-            <h3><strong>Cage Code:</strong>????</h3>
-            <h3><strong>DUNS:</strong>????</h3>
+            <p>TASH Technology is a Woman-owned Small Buisnes established in 2010. With over 20 years of software development
+                experience the team at TASH has refined their capabilities and expertise of software design and development.
+                Our team has experience and domain knowledge across multiple industries including government, healthcare,
+                and manufacturing. </p>
+            <p>We will provide the full-cycle of software development using Agile methodolgies to meet our clients' needs. We
+                believe in leveraging all our experience and knowledge to provide software at the highest level of quality.
+            </p>
             <hr/>
-            <p>TASH Technology is a Woman-owned Small Buisnes established in 2010(?). Our experienced team of software professional
-                will provide reliable and portable software in a variety of technologies. We specialize in Buisness Intelligence
-                solutions, .NET and Java developement and developement of secure software. </p>
-            <p>We have an track record of delivering software that is (extensible, scalable, efficent, and maintainable). We
-                pride ourselves on our ability to work withint a client's budget and interoperability software needs </p>
+            <div id="slideimagediv">
+                <img id="slideimage" class="slideshow">  
+            </div>
         </div>
     </div>
     <section>
-        
         <div>
-            <hr class="copyhr"/>
+            <hr class="copyhr" />
             <p id="copyright">COPYRIGHT: 2018 TASH Technology</p>
         </div>
     </section>
+
+    <script>
+        //adapted from stackoverflow questions/25347946/add-fade-effect-in-slideshow-javascript
+        var imgArr = ['assets/images/slideshow/americanflag.jpg', 'assets/images/slideshow/services.jpg', 'assets/images/slideshow/code.jpg', 'assets/images/slideshow/woman-handshake.png'];
+        var index = 0;
+        var imgDuration = 8000;
+        function slidechange(){
+            document.getElementById('slideimage').className += "fadeOut";
+            setTimeout(function(){
+                document.getElementById('slideimage').src = imgArr[index];
+                document.getElementById('slideimage').className = "";
+            }, 1500);
+            index++;
+            if(index == imgArr.length){
+                index = 0;
+            }
+            setTimeout(slidechange, imgDuration);
+        }
+        slidechange();
+    </script>
 </body>
 
 </html>
